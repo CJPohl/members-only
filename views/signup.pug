@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+    section
+        form(method='POST' action="") 
+            div 
+                input#user_first_name(type="text" required='true' placeholder='First Name' name='user_first_name')
+                input#user_last_name(type="text" required='true' placeholder='Last Name' name='user_last_name')
+            input#user_email(type="email" required='true' placeholder='Email' name='user_email')
+            div 
+                input#user_password(type="password" required='true' placeholder='Password' name='user_password')
+                input#user_confirm_password(type="password" required='true' placeholder='Confirm Password' name='user_confirm_password')
+            input#user_secret_code(type="text" placeholder='Secret Member Code' name='user_secret_code')
+            button(type='submit') Sign Up
+        if errors 
+            ul 
+                for error in errors 
+                    li!= error.msg

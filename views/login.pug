@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+
+    section 
+        form(method='POST' action='/login') 
+            input#login_email(type="email" required='true' placeholder='Email' name='email')
+            input#login_password(type="password" required='true' placeholder='Password' name='password')
+            button Login
+        if messages 
+            ul 
+                for message in messages 
+                    li!= message
