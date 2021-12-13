@@ -1,0 +1,8 @@
+extends layout 
+
+block content 
+    section 
+        form(class='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col gap-8' method='POST' action='') 
+            input#new_message_title(class='pt-3' type="text" required='true' placeholder='Title' name='new_message_title')
+            input#new_message_text(class='pt-3' type="text" required='true' placeholder='Text' name='new_message_text')
+            button(type='submit') Submit

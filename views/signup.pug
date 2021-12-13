@@ -1,16 +1,16 @@
 extends layout 
 
 block content 
-    section
-        form(method='POST' action="") 
-            div 
-                input#user_first_name(type="text" required='true' placeholder='First Name' name='user_first_name')
-                input#user_last_name(type="text" required='true' placeholder='Last Name' name='user_last_name')
-            input#user_email(type="email" required='true' placeholder='Email' name='user_email')
-            div 
-                input#user_password(type="password" required='true' placeholder='Password' name='user_password')
-                input#user_confirm_password(type="password" required='true' placeholder='Confirm Password' name='user_confirm_password')
-            input#user_secret_code(type="text" placeholder='Secret Member Code' name='user_secret_code')
+    section(class='flex justify-center items-center')
+        form(class='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col gap-8 items-center' method='POST' action="") 
+            div(class='flex  justify-center')
+                input#user_first_name(class='pt-3' type="text" required='true' placeholder='First Name' name='user_first_name')
+                input#user_last_name(class='pt-3' type="text" required='true' placeholder='Last Name' name='user_last_name')
+            input#user_email(class='pt-3 w-full' type="email" required='true' placeholder='Email' name='user_email')
+            div(class='flex justify-center') 
+                input#user_password(class='pt-3' type="password" required='true' placeholder='Password' name='user_password')
+                input#user_confirm_password(class='pt-3' type="password" required='true' placeholder='Confirm Password' name='user_confirm_password')
+            input#user_secret_code(class='pt-3' type="text" placeholder='Secret Member Code' name='user_secret_code')
             button(type='submit') Sign Up
         if errors 
             ul 

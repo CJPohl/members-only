@@ -3,9 +3,9 @@ extends layout
 block content 
 
     section 
-        form(method='POST' action='/login') 
-            input#login_email(type="email" required='true' placeholder='Email' name='email')
-            input#login_password(type="password" required='true' placeholder='Password' name='password')
+        form(class='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col gap-8' method='POST' action='/login') 
+            input#login_email(class='pt-3' type="email" required='true' placeholder='Email' name='email')
+            input#login_password(class='pt-3' type="password" required='true' placeholder='Password' name='password')
             button Login
         if messages 
             ul 

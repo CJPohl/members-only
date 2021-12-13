@@ -3,5 +3,35 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    script(src="https://kit.fontawesome.com/4c536a6bd5.js", crossorigin="anonymous")
+  body(class='h-screen w-4/5 max-w-6xl mx-auto')
+    header(class='pt-9 mb-9') 
+          nav
+              ul(class='flex justify-evenly w-full')  
+                li 
+                  button(class='bg-sky-600 hover:bg-sky-800 px-4 py-2 rounded-md font-medium text-white') 
+                    a(href="/") Home 
+                if currentUser!==undefined
+                  li 
+                    button(class='bg-sky-600 hover:bg-sky-800 px-4 py-2 rounded-md font-medium text-white') 
+                      a(href="/new-message") New Message 
+                li 
+                  if currentUser===undefined
+                    button(class='bg-sky-600 hover:bg-sky-800 px-4 py-2 rounded-md font-medium text-white') 
+                      a(href="/login") Log in 
+                  else 
+                    button(class='bg-sky-600 hover:bg-sky-800 px-4 py-2 rounded-md font-medium text-white') 
+                      a(href='/logout') Log out
+                li 
+                  button(class='bg-sky-600 hover:bg-sky-800 px-4 py-2 rounded-md font-medium text-white') 
+                    a(href="/sign-up") Sign up 
+    
+    section(class='p-7 flex justify-center flex-col items-center') 
+      h1(class='text-5xl') Cool People Only
+      p ( ... if you aren't cool GET OUT)
     block content
+
+    footer(class='absolute left-0 bottom-0 w-full flex justify-center text-2xl text-black py-3') 
+       p Copyright @ 2021 Christopher J. Pohl 
+          a(href="https://github.com/CJPohl") 
+            i(class='fab fa-github hover:scale-110')
